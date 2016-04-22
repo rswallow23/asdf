@@ -1,0 +1,178 @@
+
+.post {
+	border-bottom:solid #FFCC66 1px;
+	/*border-style: inset;*/
+	margin-bottom: 20px;
+	box-shadow: 10px 10px 5px 5px #F8F8F8 ;
+    opacity: .8;
+
+}
+.title {
+    opacity: 1;
+    text-align: center;
+    color: #FFCC66 !important;
+}
+.postuser{
+    text-align: center;
+}
+p{
+    opacity: 1 !important;
+}
+
+.title:hover {
+	text-decoration: underline;
+}
+.header {
+	text-align: center;
+	background-color:white;
+	padding-bottom: 5px;
+	padding-top: 1px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+.details {
+	display: inline;
+}
+h6{
+    color:white;
+    padding-top: 13px;
+    padding-left: 500px;
+}
+/*li:last-child{
+	float:right;
+}
+*/
+.bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FF6600;
+    height:50px;
+    opacity: 1;
+}
+
+/*li {
+    float: left;
+    opacity: 1;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}*/
+
+/* Change the link color to #111 (black) on hover */
+
+
+.navbar {
+	margin-bottom: 0px;
+    top: 0;
+    width: 100%;
+    background-color: #FF9900;
+    opacity: .75;
+    color:white;
+    border-color: none;
+    border-right: none;
+    border-top: none;
+    border-radius:0px; 
+    border-bottom: solid black 0px;
+
+}
+#active{
+    background-color: #FFCC33;
+}
+.whitefont{
+    color:white !important;
+}
+.whitefont:hover{
+    color:#D0D0D0 !important;
+}
+body {
+    background-color:#E8E8E8 ;
+    background-position: center;
+    background-size: 1600px 1400px;
+   	background-repeat: no-repeat;
+}
+
+
+.headnav{
+	/*position: fixed;*/
+    top: 0;
+    width: 100%;
+}
+.allposts{
+	padding-top: 90px;
+
+}
+#logo{
+	height: 50px;
+	width: 40px;
+	border: white 1px;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+.create{
+    padding-top: 60px;
+}
+.form{
+    padding-top: 60px;
+}
+.edit{
+    padding-top: 100px;
+}
+.register{
+    padding-top: 100px;
+}
+.button{
+    border-style: solid;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    color: black;
+    border-color:black 4px;
+}
+.button:hover{
+    background-color: #FF9933;
+    color:white;
+}
+.formfield:last-child {
+    float:left;
+}
+#button1{
+    padding-right: 10px;
+}
+.allposts{
+    padding-top:60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+.for{
+    margin-top: 5px;
+}
+body{
+    background-color: #F8F8F8 ;
+}
+.login{
+    margin-top: 60px !important;
+}
+.title {
+    opacity: 1;
+    text-align: center;
+    color: #FFCC66 !important;
+}
+a.title {
+    color: #FFCC66 !important;
+}
+.signup{
+   color: #FFCC66 !important; 
+}

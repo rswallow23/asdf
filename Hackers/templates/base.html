@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hacker News on Roids</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+	<script src="{% static 'ajax.js' %}"></script>
+	<script src="{% static 'main.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand whitefont" href="#">Hacker News on Roids</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li id="active"><a href="{% url 'index' %}" class="whitefont"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+        <li><a class="whitefont" id="createbutton" href="{% url 'home:create' %}"><span class="glyphicon glyphicon-pencil"></span>Create</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	{% if user.is_authenticated %}
+      	<li><a class="whitefont" href="">Welcome {{user}}</a></li>
+		<li><a class="whitefont" href="{% url 'home:logout' %}"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+      	{% else %}
+        <li><a class="whitefont" href="{% url 'home:register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a class="whitefont" href="{% url 'home:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+	
+	<!--<div class="navbar col-sm-12 col-lg-12">
+		<ul class="bar">
+			<li><a href="{% url 'index' %}"><img src="https://news.ycombinator.com/favicon.ico" id="logo"></a>
+			<li><a class="nav" href="{% url 'home:create' %}">create</a></li>
+			{% if user.is_authenticated %}
+			<li id="userwelcome"><h6>Welcome {{user}}</h6></li>
+			<li><a class="nav" href="{% url 'home:logout' %}">logout</a></li>
+			{% else %}
+			<li><a class="nav" href="{% url 'home:register' %}" id="register-button">register</a></li>
+			<li><a class="nav" href="{% url 'home:login' %}">login</a></li>
+			{% endif %}
+		</ul>
+	</div>-->
+<div class="container">
+{% block content %}
+<div class="col-lg-4"></div>
+{% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	
+
+	<div class="allposts">
+		{% for post in posts %}
+		<div class="post col-sm-12 col-lg-8"> 
+			{% if post.user == user%}
+			<h2 class="title"><a class="title" href="{% url 'home:edit' slug=post.slug %}">{{post.title}}</a></h2>
+			{% else %}
+			<h2 class="title"><a class="title" href="">{{post.title}}</a></h2>
+			{% endif %}
+			<div class="details">
+				<ul>
+					<li class="postuser"><p><span class="glyphicon glyphicon-time"></span><i>{{post.created_at}}</i></p></li>
+				</ul>
+			</div>
+			<p>{{post.content}}</p>
+			<p><i>Posted by : {{post.user.username | upper }}</i></p>
+		</div>
+		
+		{% endfor %}
+		<div class="pagination col-lg-8 col-sm-12">
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            page {{ posts.number }} of {{ posts.paginator.num_pages }}
+        </span>
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+	</div>
+
+
+
+
+
+{% endblock %}
