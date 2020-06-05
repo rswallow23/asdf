@@ -1,5 +1,5 @@
 Brlapi==0.6.1
-Django==1.9.2
+Django==1.11.29
 Pillow==2.3.0
 PyICU==1.5
 PyJWT==1.4.0
