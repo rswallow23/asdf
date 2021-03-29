@@ -3,7 +3,7 @@ Django==1.9.2
 Pillow==2.3.0
 PyICU==1.5
 PyJWT==1.4.0
-Pygments==2.1
+Pygments==2.7.4
 apt-clone==0.2.1
 chardet==2.2.1
 colorama==0.2.5
